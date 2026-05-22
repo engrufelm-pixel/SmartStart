@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SmartStart — дорогой светлый лендинг для детского центра развития с направлениями, расписанием и формой консультации." />
+    <title>SmartStart | Детский центр развития</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              milk: "#FBF6EE",
+              ink: "#1F2933",
+              honey: "#E9B44C",
+              clay: "#C97855",
+              sage: "#85A389"
+            },
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+            },
+            boxShadow: {
+              soft: "0 24px 70px rgba(31, 41, 51, .10)"
+            }
+          }
+        }
+      };
+    </script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: clip;
+      }
+
+      main *,
+      section * {
+        min-width: 0;
+      }
+
+      @media (max-width: 640px) {
+        [class*="tracking-"] {
+          letter-spacing: 0.18em !important;
+          overflow-wrap: anywhere;
+        }
+
+        .relative.min-h-\[480px\] {
+          min-height: 360px !important;
+        }
+
+        h1 {
+          font-size: clamp(2.75rem, 12vw, 4rem) !important;
+          line-height: 1.02 !important;
+        }
+
+        h2 {
+          font-size: clamp(2.1rem, 9vw, 3rem) !important;
+          line-height: 1.05 !important;
+        }
+
+        section {
+          scroll-margin-top: 88px;
+        }
+
+        .age-tabs {
+          max-width: calc(100vw - 2.5rem);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-milk text-ink antialiased">
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-ink/10 bg-milk/88 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a href="#" class="text-2xl font-black tracking-tight">Smart<span class="text-clay">Start</span></a>
+        <button class="menu-toggle grid h-11 w-11 place-items-center rounded-2xl border border-ink/10 md:hidden" aria-label="Открыть меню" aria-expanded="false"><i data-lucide="menu"></i></button>
+        <div class="nav-menu hidden items-center gap-8 text-sm font-bold text-ink/65 md:flex">
+          <a class="hover:text-clay" href="#directions">Направления</a>
+          <a class="hover:text-clay" href="#schedule">Расписание</a>
+          <a class="hover:text-clay" href="#consult">Консультация</a>
+          <a href="#consult" class="rounded-2xl bg-ink px-5 py-3 text-white transition hover:bg-clay">Пробное занятие</a>
+        </div>
+      </nav>
+      <div class="mobile-panel hidden border-t border-ink/10 bg-milk px-5 py-5 md:hidden">
+        <div class="grid gap-4 text-sm font-bold text-ink/70">
+          <a href="#directions">Направления</a>
+          <a href="#schedule">Расписание</a>
+          <a href="#consult">Консультация</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="pt-28">
+        <div class="mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-12 px-5 py-14 lg:grid-cols-[1fr_1fr] lg:px-8">
+          <div>
+            <p class="mb-5 text-xs font-black uppercase tracking-[0.36em] text-clay">Kids development club</p>
+            <h1 class="max-w-4xl text-5xl font-black leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">Интеллектуальное развитие ребенка через игру.</h1>
+            <p class="mt-7 max-w-2xl text-lg leading-8 text-ink/65">Современный детский центр без визуального шума: робототехника, подготовка к школе и английский в мягкой, доверительной атмосфере.</p>
+            <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+              <a href="#consult" class="rounded-2xl bg-clay px-8 py-4 text-center font-black text-white shadow-soft transition hover:bg-ink">Записаться на пробное занятие</a>
+              <a href="#directions" class="rounded-2xl border border-ink/10 bg-white px-8 py-4 text-center font-black transition hover:border-clay">Направления</a>
+            </div>
+          </div>
+          <div class="relative min-h-[480px]">
+            <div class="absolute left-4 top-6 h-56 w-56 rounded-full bg-honey/28"></div>
+            <div class="absolute bottom-8 right-4 h-64 w-64 rounded-[3rem] bg-sage/24 rotate-6"></div>
+            <img class="relative mx-auto aspect-[4/5] max-h-[560px] w-full rounded-[2rem] object-cover shadow-soft" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1300&q=85" alt="Дети занимаются в современном центре развития" />
+          </div>
+        </div>
+      </section>
+
+      <section id="directions" class="bg-white py-24">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mb-10 max-w-3xl">
+            <p class="text-xs font-black uppercase tracking-[0.36em] text-clay">Programs</p>
+            <h2 class="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Направления, которые развивают мышление</h2>
+          </div>
+          <div class="grid gap-5 md:grid-cols-3">
+            <article class="rounded-3xl border border-ink/10 bg-milk p-7 shadow-soft">
+              <i class="text-clay" data-lucide="bot"></i>
+              <h3 class="mt-6 text-2xl font-black">Робототехника</h3>
+              <p class="mt-3 leading-7 text-ink/58">Логика, конструирование, первые алгоритмы и командная работа.</p>
+            </article>
+            <article class="rounded-3xl border border-ink/10 bg-milk p-7 shadow-soft">
+              <i class="text-honey" data-lucide="book-open-check"></i>
+              <h3 class="mt-6 text-2xl font-black">Подготовка к школе</h3>
+              <p class="mt-3 leading-7 text-ink/58">Чтение, счет, внимание и уверенность перед первым классом.</p>
+            </article>
+            <article class="rounded-3xl border border-ink/10 bg-milk p-7 shadow-soft">
+              <i class="text-sage" data-lucide="languages"></i>
+              <h3 class="mt-6 text-2xl font-black">Английский</h3>
+              <p class="mt-3 leading-7 text-ink/58">Разговорная практика через игры, проекты и живые ситуации.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="schedule" class="py-24">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <p class="text-xs font-black uppercase tracking-[0.36em] text-clay">Schedule</p>
+              <h2 class="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Расписание и возраста</h2>
+            </div>
+            <div class="age-tabs flex gap-2 overflow-x-auto rounded-2xl bg-white p-1 shadow-soft">
+              <button class="age-tab active rounded-xl px-5 py-3 text-sm font-black" data-age="small">3-5 лет</button>
+              <button class="age-tab rounded-xl px-5 py-3 text-sm font-black" data-age="junior">6-8 лет</button>
+            </div>
+          </div>
+          <div class="schedule-grid grid gap-4 md:grid-cols-3"></div>
+        </div>
+      </section>
+
+      <section id="consult" class="bg-white py-24">
+        <div class="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[.85fr_1.15fr] lg:px-8">
+          <div>
+            <p class="text-xs font-black uppercase tracking-[0.36em] text-clay">Lead form</p>
+            <h2 class="mt-4 text-4xl font-black tracking-tight sm:text-5xl">Получить консультацию педагога</h2>
+            <p class="mt-5 text-ink/60">Форма отправляет заявку на ваш endpoint `/api/lead`. Его можно связать с Telegram, CRM или почтой.</p>
+          </div>
+          <form class="lead-form grid gap-4 rounded-3xl border border-ink/10 bg-milk p-6 shadow-soft sm:grid-cols-2" novalidate>
+            <input class="rounded-2xl border border-ink/10 bg-white px-4 py-4 outline-none focus:border-clay" name="name" placeholder="Имя родителя" required />
+            <input class="rounded-2xl border border-ink/10 bg-white px-4 py-4 outline-none focus:border-clay" name="phone" placeholder="Телефон" required />
+            <select class="rounded-2xl border border-ink/10 bg-white px-4 py-4 outline-none focus:border-clay" name="age">
+              <option>3-5 лет</option>
+              <option>6-8 лет</option>
+            </select>
+            <select class="rounded-2xl border border-ink/10 bg-white px-4 py-4 outline-none focus:border-clay" name="program">
+              <option>Робототехника</option>
+              <option>Подготовка к школе</option>
+              <option>Английский</option>
+            </select>
+            <button class="submit-button rounded-2xl bg-ink px-6 py-4 font-black text-white transition hover:bg-clay sm:col-span-2" type="submit">Отправить заявку</button>
+            <p class="form-status hidden text-sm sm:col-span-2" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
